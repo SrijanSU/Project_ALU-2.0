@@ -1,0 +1,332 @@
+# vsim -c top 
+# Start time: 00:28:06 on Jul 29,2025
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# //  Questa Sim
+# //  Version 10.6c linux Jul 25 2017
+# //
+# //  Copyright 1991-2017 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.alu_if(fast)
+# Loading work.alu_package(fast)
+# Loading work.alu_testbench_sv_unit(fast)
+# Loading work.top(fast)
+# ** Warning: (vsim-8441) alu_driver.sv(74): Clocking block output vif.drv_cb.CE is not legal in this
+# or another expression.
+#    Time: 0 ns  Iteration: 0  Region: /alu_package File: alu_package.sv
+# ** Warning: (vsim-8441) alu_driver.sv(73): Clocking block output vif.drv_cb.CIN is not legal in this
+# or another expression.
+#    Time: 0 ns  Iteration: 0  Region: /alu_package File: alu_package.sv
+# ** Warning: (vsim-8441) alu_driver.sv(69): Clocking block output vif.drv_cb.CMD is not legal in this
+# or another expression.
+#    Time: 0 ns  Iteration: 0  Region: /alu_package File: alu_package.sv
+# ** Warning: (vsim-8441) alu_driver.sv(68): Clocking block output vif.drv_cb.INP_VALID is not legal in this
+# or another expression.
+#    Time: 0 ns  Iteration: 0  Region: /alu_package File: alu_package.sv
+# ** Warning: (vsim-8441) alu_driver.sv(70): Clocking block output vif.drv_cb.MODE is not legal in this
+# or another expression.
+#    Time: 0 ns  Iteration: 0  Region: /alu_package File: alu_package.sv
+# ** Warning: (vsim-8441) alu_driver.sv(71): Clocking block output vif.drv_cb.OPA is not legal in this
+# or another expression.
+#    Time: 0 ns  Iteration: 0  Region: /alu_package File: alu_package.sv
+# ** Warning: (vsim-8441) alu_driver.sv(72): Clocking block output vif.drv_cb.OPB is not legal in this
+# or another expression.
+#    Time: 0 ns  Iteration: 0  Region: /alu_package File: alu_package.sv
+# ** Warning: (vsim-8441) alu_driver.sv(74): Clocking block output vif.drv_cb.CE is not legal in this
+# or another expression.
+#    Time: 0 ns  Iteration: 0  Region: /alu_testbench_sv_unit File: alu_transaction.sv
+# ** Warning: (vsim-8441) alu_driver.sv(73): Clocking block output vif.drv_cb.CIN is not legal in this
+# or another expression.
+#    Time: 0 ns  Iteration: 0  Region: /alu_testbench_sv_unit File: alu_transaction.sv
+# ** Warning: (vsim-8441) alu_driver.sv(69): Clocking block output vif.drv_cb.CMD is not legal in this
+# or another expression.
+#    Time: 0 ns  Iteration: 0  Region: /alu_testbench_sv_unit File: alu_transaction.sv
+# ** Warning: (vsim-8441) alu_driver.sv(68): Clocking block output vif.drv_cb.INP_VALID is not legal in this
+# or another expression.
+#    Time: 0 ns  Iteration: 0  Region: /alu_testbench_sv_unit File: alu_transaction.sv
+# ** Warning: (vsim-8441) alu_driver.sv(70): Clocking block output vif.drv_cb.MODE is not legal in this
+# or another expression.
+#    Time: 0 ns  Iteration: 0  Region: /alu_testbench_sv_unit File: alu_transaction.sv
+# ** Warning: (vsim-8441) alu_driver.sv(71): Clocking block output vif.drv_cb.OPA is not legal in this
+# or another expression.
+#    Time: 0 ns  Iteration: 0  Region: /alu_testbench_sv_unit File: alu_transaction.sv
+# ** Warning: (vsim-8441) alu_driver.sv(72): Clocking block output vif.drv_cb.OPB is not legal in this
+# or another expression.
+#    Time: 0 ns  Iteration: 0  Region: /alu_testbench_sv_unit File: alu_transaction.sv
+# === ALU TEST BENCH STARTED ===
+# MODE_CHECK1 test
+# GENERATOR Randomized transactions MODE=0 CMD=8 OPA=82 OPB=95 CIN=0 CE=1 INP_VALID=3 @00000000000000000000000t
+# GENERATOR Randomized transactions MODE=0 CMD=9 OPA=247 OPB=120 CIN=1 CE=1 INP_VALID=3 @00000000000000000000000t
+# GENERATOR Randomized transactions MODE=0 CMD=1 OPA=1 OPB=25 CIN=0 CE=1 INP_VALID=3 @00000000000000000000000t
+# GENERATOR Randomized transactions MODE=0 CMD=7 OPA=12 OPB=115 CIN=1 CE=1 INP_VALID=3 @00000000000000000000000t
+# GENERATOR Randomized transactions MODE=0 CMD=10 OPA=10 OPB=230 CIN=0 CE=1 INP_VALID=3 @00000000000000000000000t
+# GENERATOR Randomized transactions MODE=0 CMD=5 OPA=88 OPB=112 CIN=0 CE=1 INP_VALID=3 @00000000000000000000000t
+# Driver driving the data to interface IPV_VALID = 3,MODE = 0, CMD = 8, CE = 1, OPA =82, OPB = 95, CIN = 0                  50
+# INPUT FUNCTIONAL COVERAGE =23.14 
+# Hi
+# [MONITOR]DUT MONITOR PASSING DATA TO SCOREBOARD RES = 82, COUT = z, ERR = z, OFLOW = z, G = z, E = z, L = z                  70
+# OUTPUT FUNCTIONAL COVERAGE = 0.22
+# DUT MONITOR TO SCOREBOARD DATA RES = 82, COUT = z, ERR = z,OFLOW = z, G = z, E = z, L = z                  70
+# REFERENCE MODEL TO SCOREBOARD DATA RES = 41, COUT = z, ERR = z,OFLOW = z, G = z, E = z, L = z                  70
+# SCOREBOARD: MISMATCH -expected RES = 41,COUT = z, ERR = z, OFLOW = z, G = z, E = z, L = z
+#  Recieved - RES = 82,COUT = z, ERR = z, OFLOW = z, G = z, E = z, L = z                   70
+# ===FINAL REPORT===
+# TOTAL TRANSACTION = 1
+# MATCHES = 0
+# MISMATCHES = 1
+# SUCCESS RATE = 0.00%
+# Driver driving the data to interface IPV_VALID = 3,MODE = 0, CMD = 9, CE = 1, OPA =247, OPB = 120, CIN = 1                  90
+# INPUT FUNCTIONAL COVERAGE =30.66 
+# Hi
+# [MONITOR]DUT MONITOR PASSING DATA TO SCOREBOARD RES = 238, COUT = z, ERR = z, OFLOW = z, G = z, E = z, L = z                 110
+# OUTPUT FUNCTIONAL COVERAGE = 0.45
+# DUT MONITOR TO SCOREBOARD DATA RES = 238, COUT = z, ERR = z,OFLOW = z, G = z, E = z, L = z                 110
+# REFERENCE MODEL TO SCOREBOARD DATA RES = 238, COUT = z, ERR = z,OFLOW = z, G = z, E = z, L = z                 110
+# SCOREBOARD: MATCH -expected RES = 238,COUT = z, ERR = z, OFLOW = z, G = z, E = z, L = z                 110
+# ===FINAL REPORT===
+# TOTAL TRANSACTION = 2
+# MATCHES = 1
+# MISMATCHES = 1
+# SUCCESS RATE = 50.00%
+# Driver driving the data to interface IPV_VALID = 3,MODE = 0, CMD = 1, CE = 1, OPA =1, OPB = 25, CIN = 0                 130
+# INPUT FUNCTIONAL COVERAGE =31.93 
+# Hi
+# [MONITOR]DUT MONITOR PASSING DATA TO SCOREBOARD RES = 254, COUT = z, ERR = z, OFLOW = z, G = z, E = z, L = z                 150
+# OUTPUT FUNCTIONAL COVERAGE = 0.67
+# DUT MONITOR TO SCOREBOARD DATA RES = 254, COUT = z, ERR = z,OFLOW = z, G = z, E = z, L = z                 150
+# REFERENCE MODEL TO SCOREBOARD DATA RES = 254, COUT = z, ERR = z,OFLOW = z, G = z, E = z, L = z                 150
+# SCOREBOARD: MATCH -expected RES = 254,COUT = z, ERR = z, OFLOW = z, G = z, E = z, L = z                 150
+# ===FINAL REPORT===
+# TOTAL TRANSACTION = 3
+# MATCHES = 2
+# MISMATCHES = 1
+# SUCCESS RATE = 66.67%
+# Driver driving the data to interface IPV_VALID = 3,MODE = 0, CMD = 7, CE = 1, OPA =12, OPB = 115, CIN = 1                 170
+# INPUT FUNCTIONAL COVERAGE =33.20 
+# Hi
+# [MONITOR]DUT MONITOR PASSING DATA TO SCOREBOARD RES = 140, COUT = z, ERR = z, OFLOW = z, G = z, E = z, L = z                 190
+# OUTPUT FUNCTIONAL COVERAGE = 0.89
+# DUT MONITOR TO SCOREBOARD DATA RES = 140, COUT = z, ERR = z,OFLOW = z, G = z, E = z, L = z                 190
+# REFERENCE MODEL TO SCOREBOARD DATA RES = 140, COUT = z, ERR = z,OFLOW = z, G = z, E = z, L = z                 190
+# SCOREBOARD: MATCH -expected RES = 140,COUT = z, ERR = z, OFLOW = z, G = z, E = z, L = z                 190
+# ===FINAL REPORT===
+# TOTAL TRANSACTION = 4
+# MATCHES = 3
+# MISMATCHES = 1
+# SUCCESS RATE = 75.00%
+# Driver driving the data to interface IPV_VALID = 3,MODE = 0, CMD = 10, CE = 1, OPA =10, OPB = 230, CIN = 0                 210
+# INPUT FUNCTIONAL COVERAGE =34.47 
+# Hi
+# [MONITOR]DUT MONITOR PASSING DATA TO SCOREBOARD RES = 204, COUT = z, ERR = z, OFLOW = z, G = z, E = z, L = z                 230
+# OUTPUT FUNCTIONAL COVERAGE = 1.12
+# DUT MONITOR TO SCOREBOARD DATA RES = 204, COUT = z, ERR = z,OFLOW = z, G = z, E = z, L = z                 230
+# REFERENCE MODEL TO SCOREBOARD DATA RES = 115, COUT = z, ERR = z,OFLOW = z, G = z, E = z, L = z                 230
+# SCOREBOARD: MISMATCH -expected RES = 115,COUT = z, ERR = z, OFLOW = z, G = z, E = z, L = z
+#  Recieved - RES = 204,COUT = z, ERR = z, OFLOW = z, G = z, E = z, L = z                  230
+# ===FINAL REPORT===
+# TOTAL TRANSACTION = 5
+# MATCHES = 3
+# MISMATCHES = 2
+# SUCCESS RATE = 60.00%
+# Driver driving the data to interface IPV_VALID = 3,MODE = 0, CMD = 5, CE = 1, OPA =88, OPB = 112, CIN = 0                 250
+# INPUT FUNCTIONAL COVERAGE =35.74 
+# Hi
+# [MONITOR]DUT MONITOR PASSING DATA TO SCOREBOARD RES = 215, COUT = z, ERR = z, OFLOW = z, G = z, E = z, L = z                 270
+# OUTPUT FUNCTIONAL COVERAGE = 1.34
+# DUT MONITOR TO SCOREBOARD DATA RES = 215, COUT = z, ERR = z,OFLOW = z, G = z, E = z, L = z                 270
+# REFERENCE MODEL TO SCOREBOARD DATA RES = 215, COUT = z, ERR = z,OFLOW = z, G = z, E = z, L = z                 270
+# SCOREBOARD: MATCH -expected RES = 215,COUT = z, ERR = z, OFLOW = z, G = z, E = z, L = z                 270
+# ===FINAL REPORT===
+# TOTAL TRANSACTION = 6
+# MATCHES = 4
+# MISMATCHES = 2
+# SUCCESS RATE = 66.67%
+# GENERATOR Randomized transactions MODE=1 CMD=6 OPA=69 OPB=247 CIN=1 CE=1 INP_VALID=3 @00000000000000000004160t
+# GENERATOR Randomized transactions MODE=1 CMD=1 OPA=139 OPB=180 CIN=0 CE=1 INP_VALID=3 @00000000000000000004160t
+# GENERATOR Randomized transactions MODE=1 CMD=7 OPA=236 OPB=122 CIN=0 CE=1 INP_VALID=3 @00000000000000000004160t
+# GENERATOR Randomized transactions MODE=1 CMD=6 OPA=99 OPB=244 CIN=0 CE=1 INP_VALID=3 @00000000000000000004160t
+# GENERATOR Randomized transactions MODE=1 CMD=8 OPA=60 OPB=20 CIN=1 CE=1 INP_VALID=3 @00000000000000000004160t
+# GENERATOR Randomized transactions MODE=1 CMD=8 OPA=6 OPB=35 CIN=0 CE=1 INP_VALID=3 @00000000000000000004160t
+# Driver driving the data to interface IPV_VALID = 3,MODE = 1, CMD = 6, CE = 1, OPA =69, OPB = 247, CIN = 1                 330
+# INPUT FUNCTIONAL COVERAGE =43.26 
+# Hi
+# [MONITOR]DUT MONITOR PASSING DATA TO SCOREBOARD RES = 246, COUT = z, ERR = z, OFLOW = z, G = z, E = z, L = z                 350
+# OUTPUT FUNCTIONAL COVERAGE = 1.56
+# DUT MONITOR TO SCOREBOARD DATA RES = 246, COUT = z, ERR = z,OFLOW = z, G = z, E = z, L = z                 350
+# REFERENCE MODEL TO SCOREBOARD DATA RES = 248, COUT = z, ERR = z,OFLOW = z, G = z, E = z, L = z                 350
+# SCOREBOARD: MISMATCH -expected RES = 248,COUT = z, ERR = z, OFLOW = z, G = z, E = z, L = z
+#  Recieved - RES = 246,COUT = z, ERR = z, OFLOW = z, G = z, E = z, L = z                  350
+# ===FINAL REPORT===
+# TOTAL TRANSACTION = 7
+# MATCHES = 4
+# MISMATCHES = 3
+# SUCCESS RATE = 57.14%
+# Driver driving the data to interface IPV_VALID = 3,MODE = 1, CMD = 1, CE = 1, OPA =139, OPB = 180, CIN = 0                 370
+# INPUT FUNCTIONAL COVERAGE =43.75 
+# Hi
+# [MONITOR]DUT MONITOR PASSING DATA TO SCOREBOARD RES = 471, COUT = z, ERR = z, OFLOW = 1, G = z, E = z, L = z                 390
+# OUTPUT FUNCTIONAL COVERAGE = 8.93
+# DUT MONITOR TO SCOREBOARD DATA RES = 471, COUT = z, ERR = z,OFLOW = 1, G = z, E = z, L = z                 390
+# REFERENCE MODEL TO SCOREBOARD DATA RES = 471, COUT = z, ERR = z,OFLOW = 1, G = z, E = z, L = z                 390
+# SCOREBOARD: MATCH -expected RES = 471,COUT = z, ERR = z, OFLOW = 1, G = z, E = z, L = z                 390
+# ===FINAL REPORT===
+# TOTAL TRANSACTION = 8
+# MATCHES = 5
+# MISMATCHES = 3
+# SUCCESS RATE = 62.50%
+# Driver driving the data to interface IPV_VALID = 3,MODE = 1, CMD = 7, CE = 1, OPA =236, OPB = 122, CIN = 0                 410
+# INPUT FUNCTIONAL COVERAGE =44.24 
+# Hi
+# [MONITOR]DUT MONITOR PASSING DATA TO SCOREBOARD RES = 123, COUT = z, ERR = z, OFLOW = z, G = z, E = z, L = z                 430
+# OUTPUT FUNCTIONAL COVERAGE = 9.15
+# DUT MONITOR TO SCOREBOARD DATA RES = 123, COUT = z, ERR = z,OFLOW = z, G = z, E = z, L = z                 430
+# REFERENCE MODEL TO SCOREBOARD DATA RES = 121, COUT = z, ERR = z,OFLOW = z, G = z, E = z, L = z                 430
+# SCOREBOARD: MISMATCH -expected RES = 121,COUT = z, ERR = z, OFLOW = z, G = z, E = z, L = z
+#  Recieved - RES = 123,COUT = z, ERR = z, OFLOW = z, G = z, E = z, L = z                  430
+# ===FINAL REPORT===
+# TOTAL TRANSACTION = 9
+# MATCHES = 5
+# MISMATCHES = 4
+# SUCCESS RATE = 55.56%
+# Driver driving the data to interface IPV_VALID = 3,MODE = 1, CMD = 6, CE = 1, OPA =99, OPB = 244, CIN = 0                 450
+# INPUT FUNCTIONAL COVERAGE =44.34 
+# Hi
+# [MONITOR]DUT MONITOR PASSING DATA TO SCOREBOARD RES = 243, COUT = z, ERR = z, OFLOW = z, G = z, E = z, L = z                 470
+# OUTPUT FUNCTIONAL COVERAGE = 9.15
+# DUT MONITOR TO SCOREBOARD DATA RES = 243, COUT = z, ERR = z,OFLOW = z, G = z, E = z, L = z                 470
+# REFERENCE MODEL TO SCOREBOARD DATA RES = 245, COUT = z, ERR = z,OFLOW = z, G = z, E = z, L = z                 470
+# SCOREBOARD: MISMATCH -expected RES = 245,COUT = z, ERR = z, OFLOW = z, G = z, E = z, L = z
+#  Recieved - RES = 243,COUT = z, ERR = z, OFLOW = z, G = z, E = z, L = z                  470
+# ===FINAL REPORT===
+# TOTAL TRANSACTION = 10
+# MATCHES = 5
+# MISMATCHES = 5
+# SUCCESS RATE = 50.00%
+# Driver driving the data to interface IPV_VALID = 3,MODE = 1, CMD = 8, CE = 1, OPA =60, OPB = 20, CIN = 1                 490
+# INPUT FUNCTIONAL COVERAGE =44.82 
+# Hi
+# [MONITOR]DUT MONITOR PASSING DATA TO SCOREBOARD RES = z, COUT = z, ERR = z, OFLOW = z, G = 1, E = z, L = z                 510
+# OUTPUT FUNCTIONAL COVERAGE = 16.29
+# DUT MONITOR TO SCOREBOARD DATA RES = z, COUT = z, ERR = z,OFLOW = z, G = 1, E = z, L = z                 510
+# REFERENCE MODEL TO SCOREBOARD DATA RES = 0, COUT = z, ERR = z,OFLOW = z, G = 1, E = 0, L = 0                 510
+# SCOREBOARD: MISMATCH -expected RES = 0,COUT = z, ERR = z, OFLOW = z, G = 1, E = 0, L = 0
+#  Recieved - RES = z,COUT = z, ERR = z, OFLOW = z, G = 1, E = z, L = z                  510
+# ===FINAL REPORT===
+# TOTAL TRANSACTION = 11
+# MATCHES = 5
+# MISMATCHES = 6
+# SUCCESS RATE = 45.45%
+# Driver driving the data to interface IPV_VALID = 3,MODE = 1, CMD = 8, CE = 1, OPA =6, OPB = 35, CIN = 0                 530
+# INPUT FUNCTIONAL COVERAGE =44.92 
+# Hi
+# [MONITOR]DUT MONITOR PASSING DATA TO SCOREBOARD RES = z, COUT = z, ERR = z, OFLOW = z, G = z, E = z, L = 1                 550
+# OUTPUT FUNCTIONAL COVERAGE = 23.44
+# DUT MONITOR TO SCOREBOARD DATA RES = z, COUT = z, ERR = z,OFLOW = z, G = z, E = z, L = 1                 550
+# REFERENCE MODEL TO SCOREBOARD DATA RES = 0, COUT = z, ERR = z,OFLOW = z, G = 0, E = 0, L = 1                 550
+# SCOREBOARD: MISMATCH -expected RES = 0,COUT = z, ERR = z, OFLOW = z, G = 0, E = 0, L = 1
+#  Recieved - RES = z,COUT = z, ERR = z, OFLOW = z, G = z, E = z, L = 1                  550
+# ===FINAL REPORT===
+# TOTAL TRANSACTION = 12
+# MATCHES = 5
+# MISMATCHES = 7
+# SUCCESS RATE = 41.67%
+# 1
+# GENERATOR Randomized transactions MODE=0 CMD=11 OPA=20 OPB=28 CIN=1 CE=1 INP_VALID=3 @00000000000000000010460t
+# GENERATOR Randomized transactions MODE=0 CMD=2 OPA=232 OPB=137 CIN=0 CE=1 INP_VALID=3 @00000000000000000010460t
+# GENERATOR Randomized transactions MODE=0 CMD=4 OPA=77 OPB=191 CIN=0 CE=1 INP_VALID=3 @00000000000000000010460t
+# GENERATOR Randomized transactions MODE=0 CMD=12 OPA=120 OPB=41 CIN=1 CE=1 INP_VALID=3 @00000000000000000010460t
+# GENERATOR Randomized transactions MODE=0 CMD=7 OPA=175 OPB=103 CIN=0 CE=1 INP_VALID=3 @00000000000000000010460t
+# GENERATOR Randomized transactions MODE=0 CMD=4 OPA=43 OPB=119 CIN=0 CE=1 INP_VALID=3 @00000000000000000010460t
+# Driver driving the data to interface IPV_VALID = 3,MODE = 0, CMD = 11, CE = 1, OPA =20, OPB = 28, CIN = 1                 610
+# INPUT FUNCTIONAL COVERAGE =46.19 
+# Hi
+# [MONITOR]DUT MONITOR PASSING DATA TO SCOREBOARD RES = 56, COUT = z, ERR = z, OFLOW = z, G = z, E = z, L = z                 630
+# OUTPUT FUNCTIONAL COVERAGE = 23.66
+# DUT MONITOR TO SCOREBOARD DATA RES = 56, COUT = z, ERR = z,OFLOW = z, G = z, E = z, L = z                 630
+# REFERENCE MODEL TO SCOREBOARD DATA RES = 56, COUT = z, ERR = z,OFLOW = z, G = z, E = z, L = z                 630
+# SCOREBOARD: MATCH -expected RES = 56,COUT = z, ERR = z, OFLOW = z, G = z, E = z, L = z                 630
+# ===FINAL REPORT===
+# TOTAL TRANSACTION = 13
+# MATCHES = 6
+# MISMATCHES = 7
+# SUCCESS RATE = 46.15%
+# Driver driving the data to interface IPV_VALID = 3,MODE = 0, CMD = 2, CE = 1, OPA =232, OPB = 137, CIN = 0                 650
+# INPUT FUNCTIONAL COVERAGE =47.46 
+# Hi
+# [MONITOR]DUT MONITOR PASSING DATA TO SCOREBOARD RES = 1, COUT = z, ERR = z, OFLOW = z, G = z, E = z, L = z                 670
+# OUTPUT FUNCTIONAL COVERAGE = 23.88
+# DUT MONITOR TO SCOREBOARD DATA RES = 1, COUT = z, ERR = z,OFLOW = z, G = z, E = z, L = z                 670
+# REFERENCE MODEL TO SCOREBOARD DATA RES = 233, COUT = z, ERR = z,OFLOW = z, G = z, E = z, L = z                 670
+# SCOREBOARD: MISMATCH -expected RES = 233,COUT = z, ERR = z, OFLOW = z, G = z, E = z, L = z
+#  Recieved - RES = 1,COUT = z, ERR = z, OFLOW = z, G = z, E = z, L = z                  670
+# ===FINAL REPORT===
+# TOTAL TRANSACTION = 14
+# MATCHES = 6
+# MISMATCHES = 8
+# SUCCESS RATE = 42.86%
+# Driver driving the data to interface IPV_VALID = 3,MODE = 0, CMD = 4, CE = 1, OPA =77, OPB = 191, CIN = 0                 690
+# INPUT FUNCTIONAL COVERAGE =48.73 
+# Hi
+# [MONITOR]DUT MONITOR PASSING DATA TO SCOREBOARD RES = 242, COUT = z, ERR = z, OFLOW = z, G = z, E = z, L = z                 710
+# OUTPUT FUNCTIONAL COVERAGE = 23.88
+# DUT MONITOR TO SCOREBOARD DATA RES = 242, COUT = z, ERR = z,OFLOW = z, G = z, E = z, L = z                 710
+# REFERENCE MODEL TO SCOREBOARD DATA RES = 242, COUT = z, ERR = z,OFLOW = z, G = z, E = z, L = z                 710
+# SCOREBOARD: MATCH -expected RES = 242,COUT = z, ERR = z, OFLOW = z, G = z, E = z, L = z                 710
+# ===FINAL REPORT===
+# TOTAL TRANSACTION = 15
+# MATCHES = 7
+# MISMATCHES = 8
+# SUCCESS RATE = 46.67%
+# Driver driving the data to interface IPV_VALID = 3,MODE = 0, CMD = 12, CE = 1, OPA =120, OPB = 41, CIN = 1                 730
+# INPUT FUNCTIONAL COVERAGE =50.00 
+# Hi
+# [MONITOR]DUT MONITOR PASSING DATA TO SCOREBOARD RES = 240, COUT = z, ERR = 1, OFLOW = z, G = z, E = z, L = z                 750
+# OUTPUT FUNCTIONAL COVERAGE = 31.03
+# DUT MONITOR TO SCOREBOARD DATA RES = 240, COUT = z, ERR = 1,OFLOW = z, G = z, E = z, L = z                 750
+# REFERENCE MODEL TO SCOREBOARD DATA RES = 240, COUT = z, ERR = 1,OFLOW = z, G = z, E = z, L = z                 750
+# SCOREBOARD: MATCH -expected RES = 240,COUT = z, ERR = 1, OFLOW = z, G = z, E = z, L = z                 750
+# ===FINAL REPORT===
+# TOTAL TRANSACTION = 16
+# MATCHES = 8
+# MISMATCHES = 8
+# SUCCESS RATE = 50.00%
+# Driver driving the data to interface IPV_VALID = 3,MODE = 0, CMD = 7, CE = 1, OPA =175, OPB = 103, CIN = 0                 770
+# INPUT FUNCTIONAL COVERAGE =50.10 
+# Hi
+# [MONITOR]DUT MONITOR PASSING DATA TO SCOREBOARD RES = 152, COUT = z, ERR = z, OFLOW = z, G = z, E = z, L = z                 790
+# OUTPUT FUNCTIONAL COVERAGE = 31.25
+# DUT MONITOR TO SCOREBOARD DATA RES = 152, COUT = z, ERR = z,OFLOW = z, G = z, E = z, L = z                 790
+# REFERENCE MODEL TO SCOREBOARD DATA RES = 152, COUT = z, ERR = z,OFLOW = z, G = z, E = z, L = z                 790
+# SCOREBOARD: MATCH -expected RES = 152,COUT = z, ERR = z, OFLOW = z, G = z, E = z, L = z                 790
+# ===FINAL REPORT===
+# TOTAL TRANSACTION = 17
+# MATCHES = 9
+# MISMATCHES = 8
+# SUCCESS RATE = 52.94%
+# Driver driving the data to interface IPV_VALID = 3,MODE = 0, CMD = 4, CE = 1, OPA =43, OPB = 119, CIN = 0                 810
+# INPUT FUNCTIONAL COVERAGE =50.20 
+# Hi
+# [MONITOR]DUT MONITOR PASSING DATA TO SCOREBOARD RES = 92, COUT = z, ERR = z, OFLOW = z, G = z, E = z, L = z                 830
+# OUTPUT FUNCTIONAL COVERAGE = 31.47
+# DUT MONITOR TO SCOREBOARD DATA RES = 92, COUT = z, ERR = z,OFLOW = z, G = z, E = z, L = z                 830
+# REFERENCE MODEL TO SCOREBOARD DATA RES = 92, COUT = z, ERR = z,OFLOW = z, G = z, E = z, L = z                 830
+# SCOREBOARD: MATCH -expected RES = 92,COUT = z, ERR = z, OFLOW = z, G = z, E = z, L = z                 830
+# ===FINAL REPORT===
+# TOTAL TRANSACTION = 18
+# MATCHES = 10
+# MISMATCHES = 8
+# SUCCESS RATE = 55.56%
+# === ALU TEST BENCH COMPLETED ===
+# ** Note: $finish    : alu_testbench.sv(64)
+#    Time: 830 ns  Iteration: 4  Instance: /top
+# End time: 00:28:09 on Jul 29,2025, Elapsed time: 0:00:03
+# Errors: 0, Warnings: 14
