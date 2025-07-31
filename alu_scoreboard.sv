@@ -27,10 +27,12 @@ class alu_scoreboard;
           compare_report();
           percent++;
           $display("===FINAL REPORT===");
-          $display("TOTAL TRANSACTION = %0d",percent);
+          $display("TOTAL TRANSACTION IN EACH CHECK = %0d",`NUM_TRANSACTIONS);
           $display("MATCHES = %0d",MATCH);
           $display("MISMATCHES = %0d",MISMATCH);
           $display("SUCCESS RATE = %0.2f%%",(MATCH*100.00)/percent);
+          $display("TOTAL TRANSACTION COMPLETED= %0d",percent);
+          $display("===FINAL REPORT==="); 
     	end
   	endtask
   	
@@ -51,5 +53,8 @@ class alu_scoreboard;
           	MISMATCH++;
           	$display("SCOREBOARD: MISMATCH -expected RES = %0d,COUT = %0d, ERR = %0d, OFLOW = %0d, G = %0d, E = %0d, L = %0d\n Recieved - RES = %0d,COUT = %0d, ERR = %0d, OFLOW = %0d, G = %0d, E = %0d, L = %0d ",r2s_tr.RES,r2s_tr.COUT,r2s_tr.ERR,r2s_tr.OFLOW,r2s_tr.G,r2s_tr.E,r2s_tr.L,m2s_tr.RES,m2s_tr.COUT,m2s_tr.ERR,m2s_tr.OFLOW,m2s_tr.G,m2s_tr.E,m2s_tr.L,$time);
         end
+      
   	endtask
+
 endclass
+

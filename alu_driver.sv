@@ -7,7 +7,7 @@ class alu_driver;
   virtual alu_if.DRV vif;
   bit found_valid_11;
 //   bit flag=0;
- 
+// event ev_dr;
   	covergroup cg_drv;
     	INPUT_VALID : coverpoint tr_dr.INP_VALID { bins valid_opa = {2'b01};
              	                                       bins valid_opb = {2'b10};
@@ -37,6 +37,7 @@ class alu_driver;
       	this.mbx_g2d = mbx_g2d;
       	this.mbx_d2r = mbx_d2r;
       	this.vif = vif;
+    	//this.ev_dr = ev_dr;
       	cg_drv = new();
   	endfunction
   
@@ -59,11 +60,11 @@ class alu_driver;
   	task start();
      repeat (1) @(vif.drv_cb);
       		for(int i=0;i<`NUM_TRANSACTIONS;i++)begin
+//                if(flag)
+//                     @(vif.drv_cb)$display($time);
               	tr_dr = new();
               	mbx_g2d.get(tr_dr);
               	if(is_single_operand_operation(tr_dr))begin
-//                   if(flag)
-//                     repeat(2)@(vif.drv_cb)
                   repeat(1)@(vif.drv_cb)begin
               			vif.drv_cb.INP_VALID <= tr_dr.INP_VALID;
                   		vif.drv_cb.CMD <= tr_dr.CMD;
@@ -75,13 +76,14 @@ class alu_driver;
                     	@(vif.drv_cb)
                     $display("Driver driving the data to interface IPV_VALID = %0d,MODE = %0d, CMD = %0d, CE = %0d, OPA =%0d, OPB = %0d, CIN = %0d",vif.drv_cb.INP_VALID,vif.drv_cb.MODE,vif.drv_cb.CMD,vif.drv_cb.CE,vif.drv_cb.OPA,vif.drv_cb.OPB,vif.drv_cb.CIN,$time);
                   		mbx_d2r.put(tr_dr);
+                    	//-> ev_dr;
                   		cg_drv.sample();
                   		$display("INPUT FUNCTIONAL COVERAGE =%.2f ",cg_drv.get_coverage());
                   end
               	end
               	
               	else if(tr_dr.INP_VALID == 2'b11 || tr_dr.INP_VALID == 2'b00)begin
-                  repeat(1)@(vif.drv_cb)begin
+                  repeat(1)@(vif.drv_cb)
               			vif.drv_cb.INP_VALID <= tr_dr.INP_VALID;
                   		vif.drv_cb.CMD <= tr_dr.CMD;
                   		vif.drv_cb.MODE <= tr_dr.MODE;
@@ -94,21 +96,23 @@ class alu_driver;
                     
                     
                       	if (tr_dr.MODE && (tr_dr.CMD == `INC_MUL || tr_dr.CMD == `SHIFT_MUL)) begin
-                          $display("HI");
+//                           $display("HI");
 //                           flag=1;
                           repeat(2)@(vif.drv_cb)
          				  mbx_d2r.put(tr_dr);
+                          //-> ev_dr;
           				  cg_drv.sample();
           				  $display("INPUT FUNCTIONAL COVERAGE = %.2f", cg_drv.get_coverage());
         				end 
         				else begin
 //                           flag=0;
-         					//@(vif.drv_cb)
+         					@(vif.drv_cb)
            					mbx_d2r.put(tr_dr);
+                          //-> ev_dr;
            					cg_drv.sample();
          					$display("INPUT FUNCTIONAL COVERAGE =%.2f ",cg_drv.get_coverage());    
        					 end
-                	end	
+                	
               	end
               
               	else begin
@@ -123,6 +127,7 @@ class alu_driver;
                    @(vif.drv_cb)
                   $display("3 Driver driving the data to interface IPV_VALID = %0d,MODE = %0d, CMD = %0d, CE = %0d, OPA =%0d, OPB = %0d, CIN = %0d",vif.drv_cb.INP_VALID,vif.drv_cb.MODE,vif.drv_cb.CMD,vif.drv_cb.CE,vif.drv_cb.OPA,vif.drv_cb.OPB,vif.drv_cb.CIN,$time);
                   		mbx_d2r.put(tr_dr);
+                  		//-> ev_dr;
                   		cg_drv.sample();
                   		$display("INPUT FUNCTIONAL COVERAGE =%2f ",cg_drv.get_coverage());
                    found_valid_11 = 1'b0;
@@ -135,17 +140,19 @@ class alu_driver;
                     
                     	temp_trans.CMD = tr_dr.CMD;
                     	temp_trans.MODE = tr_dr.MODE;
-                    
                     	void'(temp_trans.randomize());
                       	@(vif.drv_cb)begin
+                          	vif.drv_cb.INP_VALID<= temp_trans.INP_VALID;
                         	vif.drv_cb.CMD<= temp_trans.CMD;
                          	vif.drv_cb.MODE <= temp_trans.MODE;
                   			vif.drv_cb.OPA <= temp_trans.OPA;
                   			vif.drv_cb.OPB <= temp_trans.OPB;
                   			vif.drv_cb.CIN <= temp_trans.CIN;
                   			vif.drv_cb.CE <= temp_trans.CE;
-                  			$display("Driver driving the data to interface IPV_VALID = %0d,MODE = %0d, CMD = %0d, CE = %0d, OPA =%0d, OPB = %0d, CIN = %0d",vif.drv_cb.INP_VALID,vif.drv_cb.MODE,vif.drv_cb.CMD,vif.drv_cb.CE,vif.drv_cb.OPA,vif.drv_cb.OPB,vif.drv_cb.CIN,$time);
-                  			mbx_d2r.put(tr_dr);
+                          $display("1 Driver driving the data to interface IPV_VALID = %0d,MODE = %0d, CMD = %0d, CE = %0d, OPA =%0d, OPB = %0d, CIN = %0d",vif.drv_cb.INP_VALID,vif.drv_cb.MODE,vif.drv_cb.CMD,vif.drv_cb.CE,vif.drv_cb.OPA,vif.drv_cb.OPB,vif.drv_cb.CIN,$time);
+                  			mbx_d2r.put(temp_trans);
+                          	@(vif.drv_cb)
+                           // -> ev_dr;
                   			cg_drv.sample();
                   			$display("INPUT FUNCTIONAL COVERAGE =%.2f ",cg_drv.get_coverage()); 
                     	end

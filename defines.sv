@@ -1,6 +1,6 @@
 `define DATA_WIDTH       8         
 `define CMD_WIDTH        4            
-`define NUM_TRANSACTIONS 6
+`define NUM_TRANSACTIONS 25
 `define MAX_CYCLE_WAIT	 16
 `define ROR_WIDTH		 $clog2(`DATA_WIDTH)
 `define PERIOD			 20

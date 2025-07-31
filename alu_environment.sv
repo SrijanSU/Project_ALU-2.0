@@ -1,9 +1,10 @@
-`include"defines.sv"
+`include "defines.sv"
 class alu_environment;
   	virtual alu_if vidrv;
   	virtual alu_if vimon;
   	virtual alu_if viref;
-  
+  	event ev_rm;
+  	//event ev_dr;
   mailbox #(alu_transaction) mbx_g2d;
   mailbox #(alu_transaction) mbx_d2r;
   mailbox #(alu_transaction) mbx_m2s;
@@ -29,18 +30,19 @@ class alu_environment;
       
       gen = new(mbx_g2d);
       drv = new(mbx_g2d,mbx_d2r,vidrv);
-      mon = new(mbx_m2s,vimon);
-      ref_model = new(mbx_d2r,mbx_r2s,viref);
+      mon = new(mbx_m2s,vimon,ev_rm);
+      ref_model = new(mbx_d2r,mbx_r2s,viref,ev_rm);
       scb = new(mbx_m2s,mbx_r2s);
   	endtask
   	
   	task start();
       	fork
           	gen.start();
-          drv.start(); 
+          	drv.start(); 
           	mon.start();
           	scb.start();
           	ref_model.start();
+          
         join
   	endtask
 endclass
